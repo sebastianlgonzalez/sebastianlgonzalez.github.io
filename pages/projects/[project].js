@@ -26,7 +26,6 @@ export const getStaticPaths = async () => {
   };
 }
 
-
 export default function Project() {
   const router = useRouter()
   const currentProject = projects.find(project => project.id == router.query.project && project.type == 0);

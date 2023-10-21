@@ -11,7 +11,6 @@ export default function Projects() {
     linkRefs.forEach((linkRef, index) => {
       if (linkRef.current) {
         const width = linkRef.current.getBoundingClientRect().width;
-        console.log(width)
         projectRefs[index].current.style.width = `${width}px`;
       }
     });

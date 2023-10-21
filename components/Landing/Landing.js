@@ -4,7 +4,7 @@ export default function Landing() {
     <section id={styles.section}>
 
       <div id={styles.navbar}>
-        <div id={styles.version}>v0.01</div>
+        <div id={styles.version}>v0.03</div>
       </div>
 
       <div id={styles.info_wrapper}>

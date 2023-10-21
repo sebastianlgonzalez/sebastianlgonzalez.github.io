@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    #resume {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      margin: 0;
+      box-sizing: border-box;
+      min-width: 380px;
+    }
+
+    #header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #contact-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #name {
+      font-size: 34px;
+      font-weight: bold;
+    }
+
+    #education {
+      padding-top: 65px;
+    }
+
+    .section-heading {
+      font-weight: bold;
+    }
+
+    .bullets {
+      margin: 0 0 10px 0;
+    }
+
+    .link {
+      margin: 5px 0 5px 10px
+    }
+
+    .bold-text {
+      font-weight: 600;
+    }
+
+    .end {
+      justify-self: end;
+    }
+
+    .section-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .margin-bottom {
+      margin-bottom: 15px;
+    }
+
+    #contact-info {
+      display: flex;
+    }
+
+    .contact-element {
+      margin-right: 0.2em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="resume">
+    <div id="header">
+      <div id="name">Sebastian Gonzalez</div>
+      <div id="contact">
+        <div id="contact-info">
+          <div class="contact-element">Location: Miami, FL 33172</div>
+          <div class="contact-element">Phone: 786-366-0453</div>
+          <div class="contact-element">Email: sebastianlgonzalez01@gmail.com</div>
+          <div class="contact-element">Website: sebastianlgonzalez.github.io</div>
+        </div>
+      </div>
+    </div>
+    <div id="body">
+      <div id="education" class="margin-bottom">
+        <div class="section-heading">Education</div>
+        <div class="section-info">
+          <div class="red-text">Florida International University</div>
+          <div class="bold-text end">Miami, FL</div>
+          <div class="normal-text">B.S. Computer Engineering | GPA: 3.8/4.0</div>
+          <div class="normal-text end">2025</div>
+        </div>
+      </div>
+      <div id="projects">
+        <div class="section-heading">Relevant Projects</div>
+        <div class="project-info">
+          <div class="red-text">Portfolio Website</div>
+          <div class="link">sebastianlgonzalez.github.io</div>
+          <ul class="bullets">
+            <li>Successfully developed a professional portfolio website using React, CSS, and JSX.</li>
+            <li>Incorporated aesthetically pleasing CSS transitions and animations to enhance the user experience and
+              showcase skills.</li>
+          </ul>
+        </div>
+        <div class="project-info">
+          <div class="red-text">
+            E. Coli Sample Analysis with Machine Learning: Supervised & Unsupervised
+          </div>
+          <div class="link">link</div>
+          <ul class="bullets">
+            <li>Dummy</li>
+            <li>Dummy</li>
+            <li>Dummy</li>
+          </ul>
+        </div>
+        <div class="project-info">
+          <div class="red-text">Minesweeper wxWidgets Application</div>
+          <div class="link">link</div>
+          <ul class="bullets">
+            <li>Dummy</li>
+            <li>Dummy</li>
+            <li>Dummy</li>
+          </ul>
+        </div>
+      </div>
+      <div id="certifications" class="margin-bottom">
+        <div class="section-heading">Certifications</div>
+        <div class="section-info">
+          <div class="red-text">AI-900: Microsoft Azure AI Fundamentals</div>
+        </div>
+      </div>
+      <div id="skills">
+        <div>
+          <div class="section-heading">Languages</div>
+          <div class="margin-bottom">
+            <div class="normal-text">
+              Java, Python, C++, JavaScript, HTML, CSS, LaTeX
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-heading">Frameworks and Libraries</div>
+          <div class="margin-bottom">
+            <div class="normal-text">SciKit, NumPy, matplotlib, Node.js</div>
+          </div>
+        </div>
+        <div>
+          <div class="section-heading">Other</div>
+          <div>
+            <div class="normal-text">
+              Microsoft Word, Microsoft PowerPoint, SolidWorks
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

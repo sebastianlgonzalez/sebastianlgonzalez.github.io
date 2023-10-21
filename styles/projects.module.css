@@ -1,0 +1,36 @@
+#section {
+  height: 100vh;
+}
+
+#heading {
+  font-size: 1.5em;
+  margin-left: .7em;
+  padding-top: 2vh;
+  font-weight: 700;
+  margin-bottom: .35em;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  margin: .7em .7em .7em 3em;
+  transition: 200ms ease-in-out;
+}
+
+.link {
+  font-size: 1em;
+  width: max-content;
+  transform: scaleX(125%) skew(-25deg);
+  margin: 0;
+  transition: 200ms ease-in-out;
+}
+
+.project:hover > .link {
+  translate: 2em;
+}

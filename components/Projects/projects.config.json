@@ -1,0 +1,13 @@
+[
+  {
+    "id": "resume",
+    "name": "Resume",
+    "type": 2
+  },
+  {
+    "id": "voice_assistant",
+    "name": "A.I. Voice Assistant",
+    "type": 0,
+    "href": "https://github.com/sebastianlgonzalez/A.I.-Voice-Assistant"
+  }
+]

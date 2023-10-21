@@ -1,0 +1,9 @@
+#wrapper {
+  box-sizing: border-box;
+  padding: 4px;
+  background-color: white;
+  min-width: 100%;
+  width: fit-content;
+  height: 100dvh;
+}
+

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Lexend Exa';
+  margin: 0;
+  background-image: radial-gradient(circle farthest-corner at center center, rgba(255,255,255,1) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+main {
+  min-width: 100%;
+  width: fit-content;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+dialog {
+  border: 0;
+  padding: 0;
+  &::backdrop{
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+

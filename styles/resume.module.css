@@ -4,6 +4,6 @@
   background-color: white;
   min-width: 100%;
   width: fit-content;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 

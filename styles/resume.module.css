@@ -1,9 +1,9 @@
 #wrapper {
   box-sizing: border-box;
-  padding: 4px;
   background-color: white;
-  min-width: 100%;
   width: fit-content;
+  min-width: 100%;
   min-height: 100dvh;
+  padding: calc(env(safe-area-inset-top) + 4px) calc(env(safe-area-inset-right) + 4px) calc(env(safe-area-inset-bottom) + 4px)  calc(env(safe-area-inset-left) + 4px);
 }
 

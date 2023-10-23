@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&display=swap');
 
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
 body {
   font-family: 'Lexend Exa';
   margin: 0;
@@ -7,8 +11,10 @@ body {
 }
 
 main {
+  box-sizing: border-box;
   min-width: 100%;
   width: fit-content;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 h1, h2 {

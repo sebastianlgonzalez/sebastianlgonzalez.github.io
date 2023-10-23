@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Sebastian Gonzalez</title>
         <meta name="description" content="Portfolio" />
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, viewport-fit=cover" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>

@@ -44,7 +44,10 @@
     }
 
     .link {
-      margin: 5px 0 5px 10px
+      display: block;
+      margin: 5px 0 5px 10px;
+      text-decoration: none;
+      color: black;
     }
 
     .bold-text {
@@ -71,6 +74,10 @@
     .contact-element {
       margin-right: 0.2em;
     }
+
+    .project-title {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -91,7 +98,7 @@
       <div id="education" class="margin-bottom">
         <div class="section-heading">Education</div>
         <div class="section-info">
-          <div class="red-text">Florida International University</div>
+          <div>Florida International University</div>
           <div class="bold-text end">Miami, FL</div>
           <div class="normal-text">B.S. Computer Engineering | GPA: 3.8/4.0</div>
           <div class="normal-text end">2025</div>
@@ -100,39 +107,30 @@
       <div id="projects">
         <div class="section-heading">Relevant Projects</div>
         <div class="project-info">
-          <div class="red-text">Portfolio Website</div>
-          <div class="link">sebastianlgonzalez.github.io</div>
+          <div class="project-title">Portfolio Website</div>
+          <a href="sebastianlgonzalez.github.io" class="link">sebastianlgonzalez.github.io</a>
           <ul class="bullets">
-            <li>Successfully developed a professional portfolio website using React, CSS, and JSX.</li>
-            <li>Incorporated aesthetically pleasing CSS transitions and animations to enhance the user experience and
-              showcase skills.</li>
+            <li>Successfully developed a professional portfolio website using Next.js, CSS, and JSX.</li>
+            <li>Used Next.js's dynamic routing and URL masking to craft a user-centric experience characterized by seamless navigation.</li>
           </ul>
         </div>
         <div class="project-info">
-          <div class="red-text">
-            E. Coli Sample Analysis with Machine Learning: Supervised & Unsupervised
+          <div class="project-title">
+            A.I. Voice Assistant in Raspberry Pi
           </div>
-          <div class="link">link</div>
+          <a class="link" href="https://github.com/sebastianlgonzalez/A.I.-Voice-Assistant">https://github.com/sebastianlgonzalez/A.I.-Voice-Assistant</a>
           <ul class="bullets">
-            <li>Dummy</li>
-            <li>Dummy</li>
-            <li>Dummy</li>
-          </ul>
-        </div>
-        <div class="project-info">
-          <div class="red-text">Minesweeper wxWidgets Application</div>
-          <div class="link">link</div>
-          <ul class="bullets">
-            <li>Dummy</li>
-            <li>Dummy</li>
-            <li>Dummy</li>
+            <li>Created a always-online A.I. powered voice assistant on the Raspberry Pi Model 4 using Python, and libraries such as speech recognition and pyttsx3.</li>
+            <li>Effectively established communication with Microsoft servers through the utilization of websockets and HTML requests, facilitating the exchange of data related to BingChat conversations.</li>
+            <li>Designed an event loop incorporating error-handling interrupts that autonomously resets itself when errors occur, ensuring fault-tolerant operation.</li>
+            <li>The software manages microphone input and LED feedback, allowing users to interact with the Bing Chat bot using voice commands and providing visual status feedback.</li>
           </ul>
         </div>
       </div>
       <div id="certifications" class="margin-bottom">
         <div class="section-heading">Certifications</div>
         <div class="section-info">
-          <div class="red-text">AI-900: Microsoft Azure AI Fundamentals</div>
+          <div>AI-900: Microsoft Azure AI Fundamentals</div>
         </div>
       </div>
       <div id="skills">
@@ -147,7 +145,7 @@
         <div>
           <div class="section-heading">Frameworks and Libraries</div>
           <div class="margin-bottom">
-            <div class="normal-text">SciKit, NumPy, matplotlib, Node.js</div>
+            <div class="normal-text">SciKit, NumPy, matplotlib, Node.js, Next.js</div>
           </div>
         </div>
         <div>

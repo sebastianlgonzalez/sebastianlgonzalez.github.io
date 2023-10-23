@@ -25,10 +25,10 @@
 
 .link {
   font-size: 1em;
-  width: max-content;
   transform: scaleX(125%) skew(-25deg);
   margin: 0;
   transition: 200ms ease-in-out;
+  white-space: nowrap;
 }
 
 .project:hover > .link {

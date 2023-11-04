@@ -9,5 +9,11 @@
     "name": "A.I. Voice Assistant",
     "type": 0,
     "href": "https://github.com/sebastianlgonzalez/A.I.-Voice-Assistant"
+  },
+  {
+    "id": "ecoli_machine_learning",
+    "name": "E. Coli Sample Analysis with Machine Learning",
+    "type": 0,
+    "href": "https://colab.research.google.com/drive/1I4LQB6UJZzDO9z9j0rbef4Y9gc3BS0cF"
   }
 ]

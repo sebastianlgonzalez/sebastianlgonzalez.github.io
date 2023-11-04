@@ -2,20 +2,11 @@ import Link from "next/link"
 import styles from "@/styles/projects.module.css"
 import projects from "./projects.config.json"
 import Modal from '@/components/Projects/Modal.js'
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 export default function Projects() {
   const projectRefs = projects.map(() => useRef())
   const linkRefs = projects.map(() => useRef())
-  useEffect(() => {
-    linkRefs.forEach((linkRef, index) => {
-      if (linkRef.current) {
-        const width = linkRef.current.getBoundingClientRect().width;
-        projectRefs[index].current.style.width = `${width}px`;
-      }
-    });
-  }, []);
-
   return (
     <>
     <section id={styles.section}>

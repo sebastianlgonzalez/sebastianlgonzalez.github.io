@@ -1,5 +1,5 @@
 #section {
-  height: 100vh;
+  height: 100svh;
 }
 
 #heading {
@@ -16,8 +16,6 @@
 }
 
 .project {
-  display: flex;
-  justify-content: center;
   font-weight: 300;
   margin: .7em .7em .7em 3em;
   transition: 200ms ease-in-out;
@@ -26,9 +24,11 @@
 .link {
   font-size: 1em;
   transform: scaleX(125%) skew(-25deg);
+  transform-origin: 0;
   margin: 0;
   transition: 200ms ease-in-out;
-  white-space: nowrap;
+  max-width: calc(80% - .7em);
+  width: fit-content;
 }
 
 .project:hover > .link {

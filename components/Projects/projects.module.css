@@ -1,0 +1,52 @@
+#projects {
+  height: 100dvh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto minmax(60%, 1fr);
+}
+
+#projects > div > ul {
+  list-style-type: none;
+  margin-right: 2ch;
+}
+
+#list > li {
+  transition: 0.3s ease;
+  position: relative;
+  width: fit-content;
+}
+
+#list > li > a {
+  color: inherit;
+}
+
+#list > li:hover {
+  color: black;
+  background-color: white;
+}
+
+#list > li::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+  width: .5ch;
+  transform: translateX(-2ch);
+  transition: 0.3s;
+}
+
+#list > li[data-toggled="true"] {
+  transform: translateX(-2ch);
+  color: black;
+  background-color: white;
+}
+
+#list > li[data-toggled="true"]::before {
+  background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 705px) {
+  #projects {
+    display: block;
+  }
+}

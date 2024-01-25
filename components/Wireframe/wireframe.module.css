@@ -1,0 +1,47 @@
+/*
+#canvas {
+  max-width: 100%;
+  width: min(47vw, 100vh);
+  aspect-ratio: 1/1;
+  justify-self: center;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  #canvas {
+    width: 100%;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  #canvas {
+    height: 100%;
+  }
+}
+*/
+
+#wrapper {
+  container-type: size;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+#canvas{
+  align-self: center;
+  aspect-ratio: 1/1;
+}
+
+@container (aspect-ratio > 1/1) {
+  #canvas{
+    height: 100%;
+    width: auto;
+  }
+}
+
+@container (aspect-ratio < 1/1) {
+  #canvas {
+    width: 100%;
+    height: auto;
+  }
+}

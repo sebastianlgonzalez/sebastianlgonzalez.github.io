@@ -1,0 +1,63 @@
+#modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  max-width: 100%;
+  width: calc(100%);
+  height: calc(100% - 4em);
+  border: 0;
+  padding: 0;
+  top: 4em;
+  transition: transform .3s ease;
+  background-color: black;
+  color: white;
+  border: solid 3px white;
+  box-sizing: border-box;
+}
+
+#modal::backdrop {
+  transition: opacity .3s ease;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#modal:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+#modal[data-fade="out"] {
+  transform: translateY(100%);
+}
+
+#modal[data-fade="out"]::backdrop {
+  opacity: 0;
+}
+
+#modal[data-fade="in"] {
+  transform: translateY(0);
+}
+
+#modal[data-fade="in"]::backdrop {
+  opacity: 1;
+}
+
+#modal > a {
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  align-self: flex-end;
+  margin: .3em;
+  border: 3px solid white;
+  border-radius: 5px;
+  transition: .3s ease;
+}
+
+#modal > a:hover {
+  background-color: white;
+  color: black;
+
+}
+
+#modal > div {
+  padding: 2ch;
+}

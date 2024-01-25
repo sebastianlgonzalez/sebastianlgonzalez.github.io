@@ -1,0 +1,12 @@
+{
+  "voice_assistant" : {
+    "name" : "A.I. Voice Assistant",
+    "url" : "https://github.com/sebastianlgonzalez/A.I._Voice_Assistant",
+    "componentPath": "@/components/Projects/VoiceAssistant.js"
+  },
+  "ecoli_machine_learning" : {
+    "name" : "Ecoli Sample Analysis with Machine Learning",
+    "url" : "https://github.com/sebastianlgonzalez/Ecoli_Machine_Learning",
+    "componentPath": "@/components/Projects/EcoliMachineLearning.js"
+  }
+}

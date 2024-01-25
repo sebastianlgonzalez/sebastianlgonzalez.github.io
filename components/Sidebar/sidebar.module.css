@@ -1,0 +1,29 @@
+#wrapper {
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+#wrapper[data-fade="in"] {
+  opacity: 1;
+}
+
+#wrapper[data-fade="out"] {
+  opacity: 0;
+}
+
+#wrapper > a {
+  display: inline-block;
+  padding: 1ch;
+  border: 3px solid white;
+  border-radius: 10px;
+  transition: .3s ease;
+}
+
+#wrapper > a:hover {
+  background-color: white;
+  color: black;
+}
+
+#wrapper > p {
+  word-wrap: break-word;
+}

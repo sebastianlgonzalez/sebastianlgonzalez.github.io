@@ -3,6 +3,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: auto minmax(60%, 1fr);
+  margin-top: 80px;
 }
 
 #projects > div > ul {

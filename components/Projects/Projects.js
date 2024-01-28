@@ -13,7 +13,7 @@ export default function Projects() {
 
   return (
     <section id={styles.projects}>
-      <div>
+      <div id={styles.wrapper}>
         <h2>Projects</h2>
         <ul id={styles.list}>
           {Object.keys(projects).map((id) => {

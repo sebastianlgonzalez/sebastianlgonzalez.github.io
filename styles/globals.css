@@ -12,6 +12,10 @@ body {
   color: var(--secondary-color);
 }
 
+main {
+  min-width: 100%;
+}
+
 a {
   text-decoration: none;
   color: var(--secondary-color);

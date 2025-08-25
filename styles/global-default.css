@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+main {
+  min-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border: solid 5px var(--primary-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--primary-color);
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+

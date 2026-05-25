@@ -1,5 +1,5 @@
-import { ReportCard, VideoCard, PosterCard } from "@/components/Card";
-import ParticleBackground from "@/components/ParticleBackground";
+import { ReportCard, VideoCard, PosterCard } from "@/components/robotic_arm/Card";
+import ParticleBackground from "@/components/robotic_arm/ParticleBackground";
 
 const CardDashboard = () => {
   return (

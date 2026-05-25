@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 
 const cardContainer = "w-full bg-gradient-to-br from-slate-950/40 via-gray-950/60 to-black/80 rounded-xl overflow-hidden border border-slate-700/30 flex flex-col";

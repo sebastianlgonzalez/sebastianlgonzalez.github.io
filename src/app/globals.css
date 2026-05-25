@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #000 transparent; 
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+  }
+}

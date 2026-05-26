@@ -3,37 +3,37 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import WordWrap from './SkewWordWrap';
-import { Project } from './Menu';
+import { SelectionType } from './Menu';
 import { cn } from '@/utils/cn';
 
 type DetailsProps = {
 	className?: string;
-	selected: Project | null;
+	selected: SelectionType | null;
 };
 
 export default function Details({ selected }: DetailsProps) {
-	const [displayedProject, setDisplayedProject] = useState<Project | null>(selected);
+	const [displayedSelection, setDisplayedSelection] = useState<SelectionType | null>(selected);
 	const [isFading, setIsFading] = useState(false);
 
 	useEffect(() => {
-		if (selected !== displayedProject) {
-			if (!displayedProject) {
-				setDisplayedProject(selected);
+		if (selected !== displayedSelection) {
+			if (!displayedSelection) {
+				setDisplayedSelection(selected);
 				return;
 			}
 
 			setIsFading(true);
 
 			const timeoutId = setTimeout(() => {
-				setDisplayedProject(selected);
+				setDisplayedSelection(selected);
 				setIsFading(false);
 			}, 200);
 
 			return () => clearTimeout(timeoutId);
 		}
-	}, [selected, displayedProject]);
+	}, [selected, displayedSelection]);
 
-	const isVisible = !isFading && displayedProject !== null;
+	const isVisible = !isFading && displayedSelection !== null;
 
 	return (
 		<div className={cn('flex w-full max-w-4xl')}>
@@ -43,10 +43,10 @@ export default function Details({ selected }: DetailsProps) {
 					isVisible ? 'opacity-100' : 'pointer-events-none opacity-0'
 				)}
 			>
-				{displayedProject && (
+				{displayedSelection && (
 					<>
 						<WordWrap
-							text={displayedProject.name}
+							text={displayedSelection.name}
 							className={cn(
 								'text-3xl font-black italic uppercase text-black',
 								'-skew-x-[18deg]'
@@ -54,20 +54,20 @@ export default function Details({ selected }: DetailsProps) {
 						/>
 
 						<p className="max-w-xl font-['Arial',sans-serif] text-sm font-semibold leading-relaxed text-[#444]">
-							{displayedProject.description}
+							{displayedSelection.description}
 						</p>
-						{displayedProject.link && (
+						{displayedSelection.link && (
 							<Link
-								href={displayedProject.link}
+								href={displayedSelection.link}
 								className={cn(
 									"text-sm font-['Arial',sans-serif] text-black font-bold uppercase tracking-widest",
 									"w-fit px-5 py-2 border border-black transition-colors duration-150",
 									"hover:bg-black hover:text-white"
 								)}
-								target={displayedProject.link.startsWith('/') ? undefined : "_blank"}
-								rel={displayedProject.link.startsWith('/') ? undefined : "noopener noreferrer"}
+								target={displayedSelection.link.startsWith('/') ? undefined : "_blank"}
+								rel={displayedSelection.link.startsWith('/') ? undefined : "noopener noreferrer"}
 							>
-								{displayedProject.linkLabel ?? 'Open'}
+								{displayedSelection.linkLabel ?? 'Open'}
 							</Link>
 						)}
 					</>

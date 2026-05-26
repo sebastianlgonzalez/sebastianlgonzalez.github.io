@@ -3,28 +3,28 @@
 import Category from "@/components/Menu/Category";
 import Selection from "@/components/Menu/Selection";
 
-export type Project = {
+export type SelectionType = {
 	name: string;
 	description: string;
 	link?: string;
 	linkLabel?: string;
 };
 
-type CategoryItem = {
+type CategoryType = {
 	label: string;
-	projects: Project[];
+	selections: SelectionType[];
 };
 
 type MenuProps = {
 	className?: string;
-	selected: Project | null;
-	onSelect: (project: Project) => void;
+	selected: SelectionType | null;
+	onSelect: (selection: SelectionType) => void;
 };
 
-export const data: CategoryItem[] = [
+export const data: CategoryType[] = [
 	{
 		label: 'Freelance',
-		projects: [
+		selections: [
 			{
 				name: 'Pianeta Legno Floors',
 				description:
@@ -40,7 +40,7 @@ export const data: CategoryItem[] = [
 	},
 	{
 		label: 'Projects',
-		projects: [
+		selections: [
 			{
 				name: 'A.I. Voice Assistant',
 				description:
@@ -63,7 +63,7 @@ export const data: CategoryItem[] = [
 	},
 	{
 		label: 'Open Source',
-		projects: [
+		selections: [
 			{
 				name: 'next-build-image',
 				description:
@@ -84,10 +84,10 @@ export default function Menu({ selected, onSelect }: MenuProps) {
 		<nav className='flex flex-col' aria-label="Main menu">
 			{data.map((cat) => (
 				<Category key={cat.label} label={cat.label}>
-					{cat.projects.map((project) => (
+					{cat.selections.map((selections) => (
 						<Selection
-							key={project.name}
-							project={project}
+							key={selections.name}
+							selection={selections}
 							selected={selected}
 							onSelect={onSelect}
 						/>

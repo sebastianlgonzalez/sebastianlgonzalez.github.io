@@ -12,16 +12,19 @@ type WordWrapProps = {
   gap?: Gap;
 };
 
-export default function SkewWrap({ text, className, onClick, gap = "lg" }: WordWrapProps) {
-  const words = text.split(' ');
+export default function SkewWordWrap({ text, className, onClick, gap = "lg" }: WordWrapProps) {
   return (
     <span
       className={`flex flex-wrap group ${gapMap[gap]} ${onClick ? 'cursor-pointer' : ''}`}
       onClick={onClick}
     >
-      {words.map((word, i) => (
-        <span key={i} className={className}>
-          {word}
+      {text.split(/\s+/).filter(Boolean).map((word, i) => (
+        <span key={i} className="flex flex-wrap">
+          {word.split(/(?<=-)/).filter(Boolean).map((part, j) => (
+            <span key={`${i}-${j}`} className={className}>
+              {part}
+            </span>
+          ))}
         </span>
       ))}
     </span>

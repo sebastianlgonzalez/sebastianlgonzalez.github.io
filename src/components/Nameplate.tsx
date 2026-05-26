@@ -1,8 +1,8 @@
-import WordWrap from './WordWrap';
+import WordWrap from './SkewWordWrap';
 
 export default function Nameplate() {
   return (
-    <div className="mb-3">
+    <div className="mb-2">
       <WordWrap
         text="Sebastian Gonzalez"
         gap="lg"

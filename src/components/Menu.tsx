@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import WordWrap from './WordWrap';
-import { ChevronRight } from 'lucide-react';
+import Category from "@/components/Menu/Category";
+import Selection from "@/components/Menu/Selection";
 
 export type Project = {
 	name: string;
@@ -11,7 +10,7 @@ export type Project = {
 	linkLabel?: string;
 };
 
-type Category = {
+type CategoryItem = {
 	label: string;
 	projects: Project[];
 };
@@ -22,12 +21,12 @@ type MenuProps = {
 	onSelect: (project: Project) => void;
 };
 
-export const categories: Category[] = [
+export const data: CategoryItem[] = [
 	{
 		label: 'Freelance',
 		projects: [
 			{
-				name: 'multilayeredwoodfloors.com',
+				name: 'Pianeta Legno Floors',
 				description:
 					'Designed and developed a business website for a local wood flooring company, built in accordance with client specifications and requirements.',
 				link: 'https://multilayeredwoodfloors.com',
@@ -80,81 +79,21 @@ export const categories: Category[] = [
 	},
 ];
 
-export default function Menu({ className, selected, onSelect }: MenuProps) {
-	const [openCat, setOpenCat] = useState<string | null>(null);
-
-	const toggle = (label: string) => {
-		setOpenCat((prev) => (prev === label ? null : label));
-	};
-
+export default function Menu({ selected, onSelect }: MenuProps) {
 	return (
-		<nav className={`flex flex-col overflow-visible ${className}`} aria-label="Main menu">
-			{categories.map((cat) => {
-				const isOpen = openCat === cat.label;
-				return (
-					<div key={cat.label} className="mb-2">
-						<button
-							type="button"
-							aria-expanded={isOpen}
-							className="flex items-center gap-2 cursor-pointer select-none group text-left"
-							onClick={() => toggle(cat.label)}
-						>
-							<ChevronRight
-								size={14}
-								className={`transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'rotate-90' : 'rotate-0'
-									}`}
-							/>
-							<WordWrap
-								text={cat.label}
-								gap = "sm"
-								className="text-3xl text-black font-black italic uppercase -skew-x-[18deg] transition-colors duration-150 group-hover:text-[#444]"
-							/>
-						</button>
-
-						<div
-							className={`overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'max-h-[30vh] opacity-100' : 'max-h-0 opacity-0'
-								}`}
-						>
-							<div
-								className="custom-scrollbar max-h-38 overflow-y-auto overflow-x-hidden pt-2"
-								dir="rtl"
-							>
-								<div className="flex flex-col pl-6 pr-2" dir="ltr">
-									{cat.projects.map((project, idx) => (
-										<button
-											key={idx}
-											onClick={() => onSelect(project)}
-											className="grid text-left cursor-pointer group"
-										>
-											<div
-												aria-hidden="true"
-												className="col-start-1 row-start-1 invisible pointer-events-none"
-											>
-												<WordWrap
-													text={project.name}
-													gap = "sm"
-													className="text-2xl font-black italic uppercase -skew-x-[18deg] tracking-[0.02em]"
-												/>
-											</div>
-
-											<div className="col-start-1 row-start-1">
-												<WordWrap
-													text={project.name}
-													gap = "sm"
-													className={`text-2xl font-black italic uppercase -skew-x-[18deg] transition-all duration-100 ${selected?.name === project.name
-															? 'text-black tracking-[0.02em]'
-															: 'text-[#888] group-hover:text-[#444] group-hover:tracking-[0.02em]'
-														}`}
-												/>
-											</div>
-										</button>
-									))}
-								</div>
-							</div>
-						</div>
-					</div>
-				);
-			})}
+		<nav className='flex flex-col' aria-label="Main menu">
+			{data.map((cat) => (
+				<Category key={cat.label} label={cat.label}>
+					{cat.projects.map((project) => (
+						<Selection
+							key={project.name}
+							project={project}
+							selected={selected}
+							onSelect={onSelect}
+						/>
+					))}
+				</Category>
+			))}
 		</nav>
 	);
 }

@@ -36,10 +36,10 @@ export default function Details({ selected }: DetailsProps) {
 	const isVisible = !isFading && displayedSelection !== null;
 
 	return (
-		<div className={cn('flex w-full max-w-4xl')}>
+		<div className='flex w-full'>
 			<div
 				className={cn(
-					'flex w-full flex-col gap-6 transition-opacity duration-300 ease-in-out',
+					'flex flex-col gap-6 transition-opacity duration-300 ease-in-out',
 					isVisible ? 'opacity-100' : 'pointer-events-none opacity-0'
 				)}
 			>

@@ -14,7 +14,7 @@ export default function Interface() {
 			<Nameplate />
 			<div className='flex justify-between'>
 				<Menu selected={selected} onSelect={setSelected} />
-				<div className="hidden md:flex">
+				<div className="max-w-4xl w-full hidden md:flex ">
 					<Details selected={selected} />
 				</div>
 

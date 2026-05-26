@@ -19,9 +19,7 @@ export default function Interface() {
 				</div>
 
 			</div>
-			<div className="md:hidden">
-				<Modal selection={selected} onClose={() => setSelected(null)} />
-			</div>
+
 		</div>
 	);
 }
